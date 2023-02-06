@@ -1,0 +1,502 @@
+:root {
+  
+  --primary-color: #cfe2f3; 
+  --secondary-color:#577d9f; 
+  --tertiary-color: #b6cfe6; 
+  --quaternary-color:#9ab7d2; 
+  --quinary-color: #7f9fbc;	
+  --senary-color: #1877F2;  
+  --septenary-color:#c5000a; 
+  --octonary-color: #FFFC00;
+  --nonary-color: #ffffff;
+  --decenary-color: #000000; 
+  --undenary-color: #494949;
+  --duodenary-color: #0000ff;
+      
+  --primary-font-weight:400;
+  --primary-font-family: 'Roboto', sans-serif;
+  --primary-font-weight: 400;
+  --secondary-font-weight:700;
+  --primary-font-size: 16px;
+  --secondary-font-size:28px;
+  --tertiary-font-size:26px;
+  --quaternary-font-size:24px;
+  --quinary-font-size: 22px;
+  --senary-font-size: 20px;
+  --septenary-font-size: 18px;
+  --primary-line-height: 1.5;
+
+    }
+
+  a { 
+    color: var(--decenary-color); }
+  
+    a:active { 
+  
+    color: var(--nonary-color); }
+    
+    a:visited { 
+    color: var(--septenary-color);  }
+    
+    
+    body {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        font-family :var(--primary-font-family);
+        font-weight: var(--secondary-font-weight);
+        font-size: var(--primary-font-size);
+        line-height: var(--primary-line-height);
+      
+      }
+  
+   * {
+    box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+  
+     }
+     
+    h1, h2, h3, h4, h5, h6 {
+  
+      font-weight: var(--secondary-font-weight);
+      color: var( --duodenary-color);
+      
+    }
+
+       
+    h1 { 
+
+    font-size: var(--secondary-font-size);
+
+       }
+  
+    h2 {
+  
+      font-size: var(--tertiary-font-size);
+     
+    
+     }
+  
+    h3 { 
+    font-size: var(--quaternary-font-size);
+    
+    }
+
+    h4 { 
+
+    font-size:var(--quinary-font-size);
+
+
+    }
+
+    h5 {
+      font-size:var(--senary-font-size);
+
+    }
+
+    h6 {
+
+      font-size:var(--septenary-font-size);
+      
+    }
+
+  
+    span {
+      color: var(--nonary-color);
+      background-color: var(--secondary-color);
+      font-style: italic;
+         
+      }    
+     
+    a:hover {
+      /* No underlining when hovering over a link */
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      /* No underlining when hovering over a link */
+      text-decoration: none;
+    }  
+
+  .button {
+      /* overwrites browser defaults and resets the border */
+      border: none;
+      /* takes the font from the outer container */
+      font-family: inherit;
+      /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+      background-color: var(--octonary-color);
+      color: var(--decenary-color);
+      text-decoration: none;
+      /*adds spacing to the button (this will be discussed more in-depth later) */
+      padding: 10px;
+      border-radius: 3px;
+      /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+      border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+
+        }
+    
+  .button:hover, button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+      }
+
+  .button__secondary {
+
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: var(--senary-color);
+    color: var(--nonary-color);
+    text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition-duration: 0.2s;
+    transition-property: opacity;
+
+    }
+
+    .button__secondary:hover, .button__secondary:focus { 
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+  }
+
+      /* takes the font from the outer container */ 
+      /* to check why it is not like the forst one with the opacity */
+
+      
+    .page-header {
+      display: flex;
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      border: 10px;
+      background-color: var(--quaternary-color);
+      border-color: var(--tertiary-color);
+      border-style: outset;
+           
+    }
+    
+    
+    .page-header__item {
+      flex: 0 1 200px; 
+      height: 150px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 40%;
+
+    }
+     
+    
+    .page-header .page-header__item:last-child { /* Last child is the navigation list which should be on the right side */
+      flex-grow: 1;
+      text-align: right;
+    }
+    
+    .navigation-list { /* remove the dots of the list  */
+      list-style-type: none;
+      
+    }
+    
+    /* to add the property with a value of 
+     together with the property, to each of your list items. 
+     This will align them in a row (inline-block) 
+     and give them some space in-between them. 
+     You can target the list items by first targeting your class, 
+     then specifically targeting the inside of that class  */
+  
+    .navigation-list li { 
+      display: inline-block;
+      margin-left: 15px;
+    }
+  
+    .page-footer {
+      clear: both;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 30px;
+      
+    }
+    
+    .profile__portrait {
+  
+      float:left;
+      width: 250px;
+      max-width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin-right: 40px;
+      border-radius: 50%;
+    }
+  
+    /* .profile includes the profile pic, text hello world and the check out link: this code bellow center this class div */
+  
+    .profile {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 30px;
+    }
+  
+  /* General remove dots to the docs to all files */
+  
+    ul li { 
+       
+          list-style-type: none;
+       }
+  
+    .about {
+      
+      width: 100%;
+      max-width: auto;
+      margin: auto;
+      text-align: center;
+      padding: 10px;
+      border: 10px;
+         
+     }
+  
+    .me {
+
+      width: 100%;
+        max-width: auto;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+        border: 10px;
+           
+      }    
+    
+    .flower {
+  
+      max-width:500px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 30px;
+      border: inset;
+    }
+  
+    .form-container {
+  
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 10px 100px;
+      border: 5px;
+      text-align: left;
+      border: inset;
+    
+    }
+
+    .form-container-item {
+      text-align: left;
+
+    }
+    
+    .cv {
+      width: 100%;
+      max-width: auto;
+      margin: auto;
+      text-align: center;
+      padding: 10px;
+      border: 10px;
+        
+    }
+  
+    .berlin-illustration {
+      max-width: 650px;
+      margin: auto;
+      clear: both;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+  
+    }
+       
+    .grid__item {
+      background-color: lightblue
+     
+    }
+  
+    .grid {
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 300px 300px;
+
+    }
+  
+      /*  
+      You'll usually want to add your responsive classes at the very end of your CSS file, 
+      overwriting any rules that might have come before.
+       When you want to modify existing CSS classes, you only need to overwrite the values you want to change: 
+       
+       there’s still one problem, 
+       and that’s the large amount of repeated code between the two media queries 
+       (in fact, the property is the sole unique property between them). 
+       What you can do here is remove all of the shared CSS code and put it, instead, 
+       into another media query that targets both screen-width ranges. 
+       To do this, you’d first need to determine the combined range of all affected media queries
+       */
+  
+       @media all and (max-width: 500px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media all and (min-width: 500px) and (max-width: 750px){
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media all and (max-width: 750px) {
+        .grid {
+          grid-gap: 10px;
+        }
+        .grid__item:last-child {
+          grid-column: auto / auto;
+          grid-row: auto / auto;
+        }
+        h1 {
+          font-size: 22px; /* DELETE ??? */
+        }
+      }
+         
+   /* The animation code for Berlin*/
+  
+      @keyframes color-change {
+        0% {
+          fill: #edc655;
+        }
+        50% {
+          fill: #fcffad;
+        }
+        100% {
+          fill: #f76414;
+        }
+      }
+      .sun {
+        animation-duration: 4s;
+        animation-name: color-change;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+      }
+  
+      .sun {
+        animation: 4s color-change infinite alternate linear;
+      }
+  
+      @keyframes cloud-move {
+        from {
+          transform: translate(0, 50px);
+        }
+        to {
+          transform: translate(200px, 50px);
+        }
+      }
+  
+      .cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+    }
+   
+      @keyframes cloud-move-reverse {
+        from {
+          transform: translate(446px, 48px);
+        }
+        to {
+          transform: translate(100px, 48px);
+        }
+      }
+  
+      .cloud-back {
+        animation: 34s cloud-move-reverse infinite alternate linear;
+      }
+  
+      
+      /* The animation code for flower at about1.7new.html*/
+  
+      @keyframes flower-left-change {
+  
+        0% {
+          fill: #3f3d56;
+        }
+        50% {
+          fill: turquoise;
+        }
+        100% {
+          fill: red;
+        }
+  
+      }
+  
+  .flower-left { 
+  
+    animation-duration: 10s;
+        animation-name: flower-left-change;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        rotate: 90;
+        scale: (2,2);
+        
+  }
+  
+  @keyframes leaves-left-change { 
+  
+    0% {
+      fill: "#3f3d56";
+    }
+    50% {
+      fill: pink;
+    }
+    100% {
+      fill: darkgreen;
+  }
+  }
+  
+  .leave {
+  
+    animation-duration: 7s;
+        animation-name: leaves-left-change;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        rotate: 60;
+        scale: (2,2);
+  
+  }
+  
+  @keyframes hair-change-color {
+  
+    0% {
+      fill:"#2f2e41";
+    }
+    50% {
+      fill: rgb(20, 1, 1);
+    }
+    100% {
+      fill: yellow;
+    }
+  
+  }
+  
+  .hair {
+  
+    animation-name: hair-change-color;
+    animation-duration: 7s;
+     animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  
+  }
+  
+  
+  

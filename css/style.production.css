@@ -1,0 +1,679 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+a { 
+  color: #000000; }
+
+  a:active { 
+
+  color: #ffffff; }
+  
+  a:visited { 
+  color: #c5000a;  }
+  
+  
+  body {
+      background-color: #cfe2f3;
+      color: #577d9f;
+      font-family :'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5;
+    
+    }
+
+ * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  
+  margin: 0;
+  padding: 0;
+
+   }
+   
+  h1 {
+
+    font-weight: 700;
+    color: #0000ff;
+    
+  }
+   
+  h2 {
+
+    font-weight: 700;
+    color: #0000ff;
+    
+  }
+   
+  h3 {
+
+    font-weight: 700;
+    color: #0000ff;
+    
+  }
+   
+  h4 {
+
+    font-weight: 700;
+    color: #0000ff;
+    
+  }
+   
+  h5 {
+
+    font-weight: 700;
+    color: #0000ff;
+    
+  }
+   
+  h6 {
+
+    font-weight: 700;
+    color: #0000ff;
+    
+  }
+
+     
+  h1 { 
+
+  font-size: 28px;
+
+     }
+
+  h2 {
+
+    font-size: 26px;
+   
+  
+   }
+
+  h3 { 
+  font-size: 24px;
+  
+  }
+
+  h4 { 
+
+  font-size:22px;
+
+
+  }
+
+  h5 {
+    font-size:20px;
+
+  }
+
+  h6 {
+
+    font-size:18px;
+    
+  }
+
+
+  span {
+    color: #ffffff;
+    background-color: #577d9f;
+    font-style: italic;
+       
+    }    
+   
+  a:hover {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+  }  
+
+.button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: #FFFC00;
+    color: #000000;
+    text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+
+      }
+  
+.button:hover, button:focus {
+/* lets the mouse appear as a hand when hovering over the button */
+cursor: pointer;
+/* reduces the opacity of the button to 80% */
+opacity: 0.8;
+    }
+
+.button__secondary {
+
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #1877F2;
+  color: #ffffff;
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+
+  }
+
+  .button__secondary:hover, .button__secondary:focus { 
+/* lets the mouse appear as a hand when hovering over the button */
+cursor: pointer;
+/* reduces the opacity of the button to 80% */
+opacity: 0.8;
+}
+      /* takes the font from the outer container */ 
+    /* to check why it is not like the forst one with the opacity */
+
+    
+  .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border: 10px;
+    background-color: #9ab7d2;
+    border-color:#b6cfe6;
+    border-style: outset;
+         
+  }
+  
+         
+.page-header__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px; 
+  height: 150px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 40%;
+
+}
+    
+  .page-header .page-header__item:last-child { /* Last child is the navigation list which should be on the right side */
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: right;
+  }
+  
+  .navigation-list { /* remove the dots of the list  */
+    list-style-type: none;
+    
+  }
+  
+  /* to add the property with a value of 
+   together with the property, to each of your list items. 
+   This will align them in a row (inline-block) 
+   and give them some space in-between them. 
+   You can target the list items by first targeting your class, 
+   then specifically targeting the inside of that class  */
+
+  .navigation-list li { 
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .page-footer {
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    
+  }
+  
+  .profile__portrait {
+
+    float:left;
+    width: 250px;
+    max-width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+
+  /* .profile includes the profile pic, text hello world and the check out link: this code bellow center this class div */
+
+  .profile {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align:left;
+    padding: 30px;
+  }
+
+/* General remove dots to the docs to all files */
+
+  ul li { 
+     
+        list-style-type: none;
+     }
+
+  .about {
+    
+    width: 100%;
+    max-width: auto;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    border: 10px;
+    
+      
+  }
+    
+  .me {
+  
+  width: 100%;
+  max-width: auto;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  border: 10px;
+  
+  }    
+      
+  .flower {
+    
+        max-width:500px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px;
+        border: inset;
+      }
+    
+      .form-container {
+  
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 10px 100px;
+        border: 5px;
+        text-align: left;       
+        border: inset;
+      
+      }
+
+      .form-container-item {
+        text-align: left;
+
+      }
+      
+  .cv {
+        width: 100%;
+        max-width: auto;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+        border: 10px;
+          
+      }
+
+  .berlin-illustration {
+    max-width: 650px;
+    margin: auto;
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+
+  }
+     
+  .grid__item {
+    background-color: lightblue
+   
+  }
+
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 300px 300px 300px;
+    grid-template-columns: 300px 300px 300px;
+    -ms-grid-rows: 300px 300px;
+    grid-template-rows: 300px 300px;
+
+  }
+
+  .grid > *:nth-child(1) { 
+  -ms-grid-row: 1; 
+  -ms-grid-column: 1;
+
+  }
+
+  .grid > *:nth-child(2) { 
+  -ms-grid-row: 1; 
+  -ms-grid-column: 2;
+
+  }
+
+  .grid > *:nth-child(3) { 
+  -ms-grid-row: 1; 
+  -ms-grid-column: 3;
+
+  }
+
+  .grid > *:nth-child(4) { 
+  -ms-grid-row: 2; 
+  -ms-grid-column: 1;
+
+  }
+
+  .grid > *:nth-child(5) { 
+  -ms-grid-row: 2; 
+  -ms-grid-column: 2;
+
+  }
+
+  .grid > *:nth-child(6) { 
+  -ms-grid-row: 2; 
+  -ms-grid-column: 3;
+
+  }
+
+    /*  
+    You'll usually want to add your responsive classes at the very end of your CSS file, 
+    overwriting any rules that might have come before.
+     When you want to modify existing CSS classes, you only need to overwrite the values you want to change: 
+     
+     there’s still one problem, 
+     and that’s the large amount of repeated code between the two media queries 
+     (in fact, the property is the sole unique property between them). 
+     What you can do here is remove all of the shared CSS code and put it, instead, 
+     into another media query that targets both screen-width ranges. 
+     To do this, you’d first need to determine the combined range of all affected media queries
+     */
+
+     @media all and (max-width: 500px) {
+      .grid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+      }
+    }
+    @media all and (min-width: 500px) and (max-width: 750px){
+      .grid {
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media all and (max-width: 750px) {
+      .grid {
+        grid-gap: 10px;
+      }
+      .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+      }
+      h1 {
+        font-size: 22px; /* DELETE ??? */
+      }
+    }
+       
+ /* The animation code for Berlin*/
+
+    @-webkit-keyframes color-change {
+      0% {
+        fill: #edc655;
+      }
+      50% {
+        fill: #fcffad;
+      }
+      100% {
+        fill: #f76414;
+      }
+    }
+
+    @keyframes color-change {
+      0% {
+        fill: #edc655;
+      }
+      50% {
+        fill: #fcffad;
+      }
+      100% {
+        fill: #f76414;
+      }
+    }
+    .sun {
+      -webkit-animation-duration: 4s;
+              animation-duration: 4s;
+      -webkit-animation-name: color-change;
+              animation-name: color-change;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear;
+    }
+
+    .sun {
+      -webkit-animation: 4s color-change infinite alternate linear;
+              animation: 4s color-change infinite alternate linear;
+    }
+
+    @-webkit-keyframes cloud-move {
+      from {
+        -webkit-transform: translate(0, 50px);
+                transform: translate(0, 50px);
+      }
+      to {
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px);
+      }
+    }
+
+    @keyframes cloud-move {
+      from {
+        -webkit-transform: translate(0, 50px);
+                transform: translate(0, 50px);
+      }
+      to {
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px);
+      }
+    }
+
+    .cloud-front {
+  -webkit-animation: 30s cloud-move infinite alternate linear;
+          animation: 30s cloud-move infinite alternate linear;
+  }
+ 
+    @-webkit-keyframes cloud-move-reverse {
+      from {
+        -webkit-transform: translate(446px, 48px);
+                transform: translate(446px, 48px);
+      }
+      to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+      }
+    }
+ 
+    @keyframes cloud-move-reverse {
+      from {
+        -webkit-transform: translate(446px, 48px);
+                transform: translate(446px, 48px);
+      }
+      to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+      }
+    }
+
+    .cloud-back {
+      -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+              animation: 34s cloud-move-reverse infinite alternate linear;
+    }
+
+    
+    /* The animation code for flower at about1.7new.html*/
+
+    @-webkit-keyframes flower-left-change {
+
+      0% {
+        fill: #3f3d56;
+      }
+      50% {
+        fill: turquoise;
+      }
+      100% {
+        fill: red;
+      }
+
+    }
+
+    @keyframes flower-left-change {
+
+      0% {
+        fill: #3f3d56;
+      }
+      50% {
+        fill: turquoise;
+      }
+      100% {
+        fill: red;
+      }
+
+    }
+
+.flower-left { 
+
+  -webkit-animation-duration: 10s; 
+
+          animation-duration: 10s;
+      -webkit-animation-name: flower-left-change;
+              animation-name: flower-left-change;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear;
+      rotate: 90;
+      scale: (2,2);
+      
+}
+
+@-webkit-keyframes leaves-left-change { 
+
+  0% {
+    fill: "#3f3d56";
+  }
+  50% {
+    fill: pink;
+  }
+  100% {
+    fill: darkgreen;
+}
+}
+
+@keyframes leaves-left-change { 
+
+  0% {
+    fill: "#3f3d56";
+  }
+  50% {
+    fill: pink;
+  }
+  100% {
+    fill: darkgreen;
+}
+}
+
+.leave {
+
+  -webkit-animation-duration: 7s;
+
+          animation-duration: 7s;
+      -webkit-animation-name: leaves-left-change;
+              animation-name: leaves-left-change;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear;
+      rotate: 60;
+      scale: (2,2);
+
+}
+
+@-webkit-keyframes hair-change-color {
+
+  0% {
+    fill:"#2f2e41";
+  }
+  50% {
+    fill: rgb(20, 1, 1);
+  }
+  100% {
+    fill: yellow;
+  }
+
+}
+
+@keyframes hair-change-color {
+
+  0% {
+    fill:"#2f2e41";
+  }
+  50% {
+    fill: rgb(20, 1, 1);
+  }
+  100% {
+    fill: yellow;
+  }
+
+}
+
+.hair {
+
+  -webkit-animation-name: hair-change-color;
+
+          animation-name: hair-change-color;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+   -webkit-animation-iteration-count: infinite;
+           animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+
+}
+
+
